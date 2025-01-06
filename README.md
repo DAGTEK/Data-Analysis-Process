@@ -67,15 +67,23 @@ Here’s how you can identify and manage duplicate values in Excel:
 ### **1. Using Conditional Formatting**
 1. **Select the Data Range**:
    - Highlight the column or range of data where you want to check for duplicates.
+  
+   - ![Screenshot 2025-01-06 100501](https://github.com/user-attachments/assets/50cb8642-cd88-4473-ac23-1a842d95ca1f)
 
 2. **Apply Conditional Formatting**:
    - Go to **Home > Conditional Formatting > Highlight Cell Rules > Duplicate Values**.
+  
+   - ![Screenshot 2025-01-06 100818](https://github.com/user-attachments/assets/61453a24-28cc-4911-9ea5-c49c07bfe2a1)
 
 3. **Customize the Formatting**:
    - Choose the formatting style (e.g., red fill, yellow text) to highlight duplicates.
+  
+   - ![Screenshot 2025-01-06 101026](https://github.com/user-attachments/assets/41529511-3dcd-4451-89e0-eb1eccbae205)
 
 4. **Review Duplicates**:
    - Review the highlighted cells to see where duplicates exist.
+  
+   - ![Screenshot 2025-01-06 101209](https://github.com/user-attachments/assets/64299da5-fda5-4744-9a06-2b08ce2bb7dc)
 
 ---
 
