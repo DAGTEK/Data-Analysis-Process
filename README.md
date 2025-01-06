@@ -22,6 +22,9 @@ You are a data analyst hired by a small retail store to help improve their sales
 - **Discount:** Discount applied (%).  
 - **Revenue:** Revenue generated from the sale.
 
+### Dataset Preview
+![Screenshot 2025-01-06 094715](https://github.com/user-attachments/assets/149422db-35b1-4123-83da-5f1204a30260)
+
 ### New to Excel 
 [watch this video](https://youtu.be/LgXzzu68j7M?si=kUxmaJvVkn4X_do2)
 # Data Cleaning 
@@ -47,6 +50,7 @@ Below are step-by-step instructions to clean the provided dataset in Excel. Each
     -   Remove leading/trailing spaces.
     -   Capitalize the first letter of each word for readability (e.g., `Transaction_ID`, `Product`).
     -   Replace ambiguous column names with more descriptive ones if needed.
+![Screenshot 2025-01-06 093423](https://github.com/user-attachments/assets/8dbdd1c0-0b18-44f2-a0f2-3cf6b3a8011f)
 
 ----------
 
@@ -55,6 +59,65 @@ Below are step-by-step instructions to clean the provided dataset in Excel. Each
 ### **A. Transaction_ID**
 
 -   Check for duplicates to ensure all transaction IDs are unique. Remove any duplicate rows.
+
+Here’s how you can identify and manage duplicate values in Excel:
+
+---
+
+### **1. Using Conditional Formatting**
+1. **Select the Data Range**:
+   - Highlight the column or range of data where you want to check for duplicates.
+
+2. **Apply Conditional Formatting**:
+   - Go to **Home > Conditional Formatting > Highlight Cell Rules > Duplicate Values**.
+
+3. **Customize the Formatting**:
+   - Choose the formatting style (e.g., red fill, yellow text) to highlight duplicates.
+
+4. **Review Duplicates**:
+   - Review the highlighted cells to see where duplicates exist.
+
+---
+
+##### **2. Using the COUNTIF Formula**
+1. **Add a Helper Column**:
+   - Insert a new column next to your dataset and label it `Duplicate Check`.
+
+2. **Enter the Formula**:
+   - In the first cell of the helper column (e.g., `G2`), enter:
+     ```
+     =COUNTIF(A:A, A2)>1
+     ```
+     Replace `A:A` with the column range and `A2` with the starting cell of the column you are checking.
+
+3. **Interpret the Results**:
+   - Values greater than `1` indicate duplicates.
+
+---
+
+##### Highlight and Handle Duplicates**
+- **Keep First Occurrence Only**:
+   - If duplicates are found and you only need the first instance, use sorting or filtering.
+- **Delete Duplicate Rows**:
+   - Filter or sort the duplicates, then manually delete or use the **Remove Duplicates** tool.
+##### Remove Duplicates Tool
+1. **Select the Dataset**:
+   - Highlight your entire dataset, including headers.
+
+2. **Open the Remove Duplicates Dialog**:
+   - Go to **Data > Remove Duplicates**.
+
+3. **Specify Columns**:
+   - In the dialog box:
+     - Ensure the **My Data Has Headers** checkbox is selected.
+     - Check the columns where duplicates need to be checked.
+
+4. **Review the Results**:
+   - Excel will display a message showing the number of duplicates removed and unique values remaining.
+
+---
+
+By using these methods, you can efficiently identify and handle duplicate data in Excel.
 
 ### **B. Date**
 
