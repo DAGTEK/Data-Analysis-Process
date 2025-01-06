@@ -98,6 +98,8 @@ Here’s how you can identify and manage duplicate values in Excel:
      ```
      Replace `A:A` with the column range and `A2` with the starting cell of the column you are checking.
 
+     ![Screenshot 2025-01-06 102359](https://github.com/user-attachments/assets/b653fc97-06aa-4131-947f-cc2f29a03153)
+
 3. **Interpret the Results**:
    - Values greater than `1` indicate duplicates.
 
