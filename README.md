@@ -326,6 +326,7 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
    - Sort the `Sum of Revenue` column in descending order to find the best performer.
    - Sort in ascending order to find the worst performer.
    - Repeat for `Quantity` if you're analyzing popularity.
+   - ![Screenshot 2025-01-08 155122](https://github.com/user-attachments/assets/cc096e6d-d0f4-4f90-8f7a-5fc609169b62)
 
 4. **Visualize** *(Optional)*:
    - Create a bar chart:
@@ -347,6 +348,8 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
 3. **Summarize Sales by Category**:
    - Use the same Pivot Table.
      - Drag `Category` to **Columns** while keeping `Date` in **Rows** and `Revenue` in **Values**.
+    
+     - ![Screenshot 2025-01-08 155615](https://github.com/user-attachments/assets/66b94b1a-a527-407c-bba1-c1b072f3f9d4)
 
 4. **Visualize Trends**:
    - Insert a **Line Chart** to show revenue trends over time for each category:
