@@ -364,34 +364,16 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
    - Ensure `Discount` and `Revenue` columns are clean.
    - Convert discounts to percentages if needed (e.g., `10%` to `0.1`).
 
-2. **Calculate Metrics**:
-   - Add a new column to calculate **Discounted Sales Volume**:
-     ```
-     = Quantity * Price * (1 - Discount)
-     ```
 
-3. **Analyze Correlation**:
+2. **Analyze Correlation**:
    - Use **Scatter Plot**:
      - Select the `Discount` and `Revenue` columns.
      - Go to **Insert > Scatter Plot**.
    - Add a trendline (right-click the scatter plot > **Add Trendline**) to observe the relationship.
+   - ![Screenshot 2025-01-08 163309](https://github.com/user-attachments/assets/23e4609f-03cd-4925-ac49-610e985b9882)
 
-4. **Deeper Analysis**:
-   - Use a **Pivot Table**:
-     - Drag `Discount` to **Rows** and `Revenue` to **Values**.
-     - Use average or sum as the calculation type.
-
-5. **Regression Analysis** *(Optional)*:
-   - If Excel’s Data Analysis ToolPak is enabled:
-     - Go to **Data > Data Analysis > Regression**.
-     - Set `Discount` as the independent variable (X) and `Revenue` as the dependent variable (Y).
-
-6. **Interpret Results**:
+3. **Interpret Results**:
    - Analyze whether discounts positively or negatively correlate with revenue and by how much.
 
 ---
 
-### **Final Deliverables**
-- **Tables**: Pivot tables summarizing best/worst performers, sales by date/category, and discount impact.
-- **Charts**: Bar chart for performance, line chart for trends, scatter plot for discount effect.
-- **Insights**: Summarize findings, e.g., “Laptops generate the highest revenue, but shirts have the highest volume sold.”
