@@ -170,15 +170,21 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
     1.  Select the column.
     2.  Go to **Data > Text to Columns** if the format needs splitting.
     3.  Use **Format Cells** (Ctrl+1) to convert all dates to a consistent format (e.g., `YYYY-MM-DD`).
+    4.  Manually Correct Irregular Formats
+       - Identify Specific Issues:
+         Example: Jan-03-2023 should be converted to 03/01/2023.
+         ![Screenshot 2025-01-07 084934](https://github.com/user-attachments/assets/b49f4be1-cd22-4150-9b23-229e2dca06dd)
 
 ### **C. Product**
 
 -   Correct spelling and capitalization inconsistencies:
     -   Use **Find and Replace** (Ctrl+H):
         -   Replace `LAPTOP`, `laptop` → `Laptop`.
+        -   ![Screenshot 2025-01-07 090110](https://github.com/user-attachments/assets/cd0c1949-3ab6-4510-9230-75b42d25eb59)
+        -   ![Screenshot 2025-01-07 090314](https://github.com/user-attachments/assets/b24438a8-4158-4330-a9b4-3990dd7859fa)
+
         -   Replace `SHOES`, `shoes` → `Shoes`.
         -   Replace `backpakc` → `Backpack`, etc.
-    -   Use Excel's **Flash Fill** to quickly standardize.
 
 ### **D. Category**
 
@@ -189,6 +195,7 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
     =PROPER(A2)
     
     ```
+    ![Screenshot 2025-01-07 092037](https://github.com/user-attachments/assets/1ffe7370-11e3-42db-a26b-7e7684431166)
     
 
 ### **E. Price**
@@ -208,7 +215,7 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
 
 -   Check for invalid values:
     -   Replace negative quantities with `ABS(A2)` or mark them for review.
-    -   Fill in missing quantities with appropriate placeholders (e.g., `0`).
+    -   ![Screenshot 2025-01-07 092844](https://github.com/user-attachments/assets/22a3f341-368d-4b5d-a4e7-2791878c2687)
 
 ### **G. Discount**
 
