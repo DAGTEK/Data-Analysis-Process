@@ -301,3 +301,94 @@ By removing duplicates in the `Transaction_ID` column, you ensure that each tran
 
 -   Maintain a log of changes made for reference.
 -   Save the cleaned dataset with a new name (e.g., `Cleaned_Transactions.xlsx`).
+-   
+# **Steps for Analyzing Data**
+
+---
+
+### **1. Determine Best and Worst Performing Products**
+
+#### **Steps**:
+1. **Prepare the Data**:
+   - Ensure `Product`, `Revenue`, and `Quantity` columns are clean and standardized.
+
+2. **Summarize Performance**:
+   - Use a **Pivot Table**:
+     - Go to **Insert > Pivot Table**.
+     - ![Screenshot 2025-01-08 152355](https://github.com/user-attachments/assets/f6bd06af-4eb1-4d43-a370-40a7ca38075b)
+     - ![Screenshot 2025-01-08 152553](https://github.com/user-attachments/assets/f6197d28-bc7a-4016-9a19-0f30f47d6c83)
+     - ![Screenshot 2025-01-08 152744](https://github.com/user-attachments/assets/2611e438-86b1-4ff8-a91e-dd63c9a1b0a7)
+     - Drag `Product` to **Rows** and both `Revenue` and `Quantity` to **Values**.
+     - Set the value fields to **Sum** to calculate total revenue and quantity sold per product.
+     - ![Screenshot 2025-01-08 154239](https://github.com/user-attachments/assets/ccaeccfc-ee21-4e4a-9863-c65578fcba91)
+
+3. **Identify Best and Worst Performers**:
+   - Sort the `Sum of Revenue` column in descending order to find the best performer.
+   - Sort in ascending order to find the worst performer.
+   - Repeat for `Quantity` if you're analyzing popularity.
+
+4. **Visualize** *(Optional)*:
+   - Create a bar chart:
+     - Select the data from the pivot table and insert a **Bar Chart** (Insert > Chart > Bar).
+
+---
+
+### **2. Analyze Sales by Date and Category**
+
+#### **Steps**:
+1. **Prepare the Data**:
+   - Ensure the `Date` column is in a consistent date format and `Category` is standardized.
+
+2. **Summarize Sales by Date**:
+   - Use a **Pivot Table**:
+     - Drag `Date` to **Rows** and `Revenue` to **Values**.
+     - Group dates by day, month, or year (right-click a date in the Pivot Table > **Group**).
+
+3. **Summarize Sales by Category**:
+   - Use the same Pivot Table.
+     - Drag `Category` to **Columns** while keeping `Date` in **Rows** and `Revenue` in **Values**.
+
+4. **Visualize Trends**:
+   - Insert a **Line Chart** to show revenue trends over time for each category:
+     - Select the Pivot Table data and go to **Insert > Line Chart**.
+
+---
+
+### **3. Assess the Impact of Discounts on Sales**
+
+#### **Steps**:
+1. **Prepare the Data**:
+   - Ensure `Discount` and `Revenue` columns are clean.
+   - Convert discounts to percentages if needed (e.g., `10%` to `0.1`).
+
+2. **Calculate Metrics**:
+   - Add a new column to calculate **Discounted Sales Volume**:
+     ```
+     = Quantity * Price * (1 - Discount)
+     ```
+
+3. **Analyze Correlation**:
+   - Use **Scatter Plot**:
+     - Select the `Discount` and `Revenue` columns.
+     - Go to **Insert > Scatter Plot**.
+   - Add a trendline (right-click the scatter plot > **Add Trendline**) to observe the relationship.
+
+4. **Deeper Analysis**:
+   - Use a **Pivot Table**:
+     - Drag `Discount` to **Rows** and `Revenue` to **Values**.
+     - Use average or sum as the calculation type.
+
+5. **Regression Analysis** *(Optional)*:
+   - If Excel’s Data Analysis ToolPak is enabled:
+     - Go to **Data > Data Analysis > Regression**.
+     - Set `Discount` as the independent variable (X) and `Revenue` as the dependent variable (Y).
+
+6. **Interpret Results**:
+   - Analyze whether discounts positively or negatively correlate with revenue and by how much.
+
+---
+
+### **Final Deliverables**
+- **Tables**: Pivot tables summarizing best/worst performers, sales by date/category, and discount impact.
+- **Charts**: Bar chart for performance, line chart for trends, scatter plot for discount effect.
+- **Insights**: Summarize findings, e.g., “Laptops generate the highest revenue, but shirts have the highest volume sold.”
